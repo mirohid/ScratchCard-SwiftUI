@@ -11,7 +11,7 @@ import SwiftUI
 struct ScratchCard_SwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
         }
     }
 }
