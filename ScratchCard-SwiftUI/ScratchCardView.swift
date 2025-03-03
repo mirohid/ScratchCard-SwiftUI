@@ -11,7 +11,7 @@ struct ScratchView: View {
     @State private var rewardOptions = ["₹50", "₹100", "₹150", "₹200", "₹500"]
     
     // Card dimensions
-    let cardWidth: CGFloat = 320
+    let cardWidth: CGFloat = 300
     let cardHeight: CGFloat = 200
     
     // Colors
@@ -71,6 +71,8 @@ struct ScratchView: View {
                         )
                         .animation(springAnimation, value: isFlipped)
                 }
+                .padding(.horizontal)
+                
                 .frame(width: cardWidth, height: cardHeight)
                 .onTapGesture {
                     if !isFlipped {
@@ -362,7 +364,7 @@ struct ScratchView: View {
                     .onChanged { value in
                         let position = value.location
                         scratchPoints.append(position)
-                        playHapticFeedback(style: .light)
+                        playHapticFeedback(style: .heavy)
                     }
             )
             
